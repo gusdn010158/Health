@@ -8,19 +8,6 @@ import logo_mean_right from "./img/logo_mean_right.jpeg";
 import "./MainPage.css";
 
 const MainPage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const handleLogin = () => {
-    // 로그인 처리 로직을 구현합니다.
-    // 성공적으로 로그인되었다면 setIsLoggedIn(true)로 상태를 변경합니다.
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    // 로그아웃 처리 로직을 구현합니다.
-    // 로그아웃되었다면 setIsLoggedIn(false)로 상태를 변경합니다.
-    setIsLoggedIn(false);
-  };
-
   const [leftLogoVisible, setLeftLogoVisible] = useState(false);
   const [rightLogoVisible, setRightLogoVisible] = useState(false);
 
@@ -32,7 +19,8 @@ const MainPage = () => {
       const windowHeight = window.innerHeight;
 
       if (leftLogo) {
-        const logoMeanLeftOffset = leftLogo.offsetTop;
+        const logoMeanLeftOffset =
+          leftLogo.getBoundingClientRect().top + scrollPosition;
         if (scrollPosition > logoMeanLeftOffset - windowHeight + 100) {
           setLeftLogoVisible(true);
         } else {
@@ -41,7 +29,8 @@ const MainPage = () => {
       }
 
       if (rightLogo) {
-        const logoMeanRightOffset = rightLogo.offsetTop;
+        const logoMeanRightOffset =
+          rightLogo.getBoundingClientRect().top + scrollPosition;
         if (scrollPosition > logoMeanRightOffset - windowHeight + 100) {
           setRightLogoVisible(true);
         } else {
