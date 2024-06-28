@@ -213,5 +213,158 @@
       "local": "김포",
       "price": 20000
     }
+  ],
+  "pilates": [
+    {
+      "id": "1",
+      "name": "자마이카휘트니스",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRCF6BMKvoYSV2Rh3cDcgLxa1GTNsg7L_Heg&usqp=CAU",
+      "local": "서울",
+      "price": 55000
+    },
+    {
+      "id": "2",
+      "name": "히트 라이프 짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-gbMjG6bfyBpQK2nUOcsdfCSIOq01yuighQ&usqp=CAU",
+      "local": "대구",
+      "price": 33000
+    },
+    {
+      "id": "3",
+      "name": "라이프 줄리엣 짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTYGRcfwij-a0milpXghT-cgp8PhwWpS2wfA&usqp=CAU",
+      "local": "경북",
+      "price": 20000
+    },
+    {
+      "id": "4",
+      "name": "휘트니스 헬로우짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJSm3prpzzN2F4HQx16voHLG36i8FdQPETQ&usqp=CAU",
+      "local": "인천",
+      "price": 35000
+    },
+    {
+      "id": "5",
+      "name": "테리온 휘트니스",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_oSg2UwjeX7BfpxsAXvt2xGQdbuXK6jgzbw&usqp=CAU",
+      "local": "서울",
+      "price": 45000
+    },
+    {
+      "id": "6",
+      "name": "아프로 휘트니스",
+      "img": "https://watermark.lovepik.com/photo/20211126/large/lovepik-gym-picture_501088658.jpg",
+      "local": "서울",
+      "price": 50000
+    },
+    {
+      "id": "7",
+      "name": "인디언 마이 짐",
+      "img": "https://img.seoul.co.kr//img/upload/2021/01/04/SSI_20210104143340.jpg",
+      "local": "부산",
+      "price": 37000
+    }
+  ],
+  "golf": [
+    {
+      "id": "1",
+      "name": "자마이카휘트니스",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRCF6BMKvoYSV2Rh3cDcgLxa1GTNsg7L_Heg&usqp=CAU",
+      "local": "서울",
+      "price": 55000
+    },
+    {
+      "id": "2",
+      "name": "히트 라이프 짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-gbMjG6bfyBpQK2nUOcsdfCSIOq01yuighQ&usqp=CAU",
+      "local": "대구",
+      "price": 33000
+    },
+    {
+      "id": "3",
+      "name": "라이프 줄리엣 짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTYGRcfwij-a0milpXghT-cgp8PhwWpS2wfA&usqp=CAU",
+      "local": "경북",
+      "price": 20000
+    },
+    {
+      "id": "4",
+      "name": "휘트니스 헬로우짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJSm3prpzzN2F4HQx16voHLG36i8FdQPETQ&usqp=CAU",
+      "local": "인천",
+      "price": 35000
+    },
+    {
+      "id": "5",
+      "name": "테리온 휘트니스",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_oSg2UwjeX7BfpxsAXvt2xGQdbuXK6jgzbw&usqp=CAU",
+      "local": "서울",
+      "price": 45000
+    },
+    {
+      "id": "6",
+      "name": "아프로 휘트니스",
+      "img": "https://watermark.lovepik.com/photo/20211126/large/lovepik-gym-picture_501088658.jpg",
+      "local": "서울",
+      "price": 50000
+    }
+  ],
+  "yoga": [
+    {
+      "id": "1",
+      "name": "자마이카휘트니스",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRCF6BMKvoYSV2Rh3cDcgLxa1GTNsg7L_Heg&usqp=CAU",
+      "local": "서울",
+      "price": 55000
+    },
+    {
+      "id": "2",
+      "name": "히트 라이프 짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-gbMjG6bfyBpQK2nUOcsdfCSIOq01yuighQ&usqp=CAU",
+      "local": "대구",
+      "price": 33000
+    },
+    {
+      "id": "3",
+      "name": "라이프 줄리엣 짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTYGRcfwij-a0milpXghT-cgp8PhwWpS2wfA&usqp=CAU",
+      "local": "경북",
+      "price": 20000
+    },
+    {
+      "id": "4",
+      "name": "휘트니스 헬로우짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJSm3prpzzN2F4HQx16voHLG36i8FdQPETQ&usqp=CAU",
+      "local": "인천",
+      "price": 35000
+    },
+    {
+      "id": "5",
+      "name": "휘트니스 헬로우짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJSm3prpzzN2F4HQx16voHLG36i8FdQPETQ&usqp=CAU",
+      "local": "인천",
+      "price": 35000
+    },
+    {
+      "id": "6",
+      "name": "테리온 휘트니스",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_oSg2UwjeX7BfpxsAXvt2xGQdbuXK6jgzbw&usqp=CAU",
+      "local": "서울",
+      "price": 45000
+    },
+    {
+      "id": "7",
+      "name": "아프로 휘트니스",
+      "img": "https://watermark.lovepik.com/photo/20211126/large/lovepik-gym-picture_501088658.jpg",
+      "local": "서울",
+      "price": 50000
+    },
+    {
+      "id": "8",
+      "name": "인디언 마이 짐",
+      "img": "https://img.seoul.co.kr//img/upload/2021/01/04/SSI_20210104143340.jpg",
+      "local": "부산",
+      "price": 37000
+    }
   ]
 }
