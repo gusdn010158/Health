@@ -8,41 +8,27 @@ import logo_mean_right from "./img/logo_mean_right.jpeg";
 import "./MainPage.css";
 
 const MainPage = () => {
-  const [leftLogoVisible, setLeftLogoVisible] = useState(false);
-  const [rightLogoVisible, setRightLogoVisible] = useState(false);
+  const [Visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const leftLogo = document.querySelector(".logo_mean_left");
-      const rightLogo = document.querySelector(".logo_mean_right");
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        setVisible(entry.isIntersecting);
+      });
+    });
 
-      if (leftLogo) {
-        const logoMeanLeftOffset =
-          leftLogo.getBoundingClientRect().top + scrollPosition;
-        if (scrollPosition > logoMeanLeftOffset - windowHeight + 100) {
-          setLeftLogoVisible(true);
-        } else {
-          setLeftLogoVisible(false);
-        }
-      }
+    const targets = document.querySelectorAll(
+      ".logo_mean_left, .logo_mean_right"
+    );
 
-      if (rightLogo) {
-        const logoMeanRightOffset =
-          rightLogo.getBoundingClientRect().top + scrollPosition;
-        if (scrollPosition > logoMeanRightOffset - windowHeight + 100) {
-          setRightLogoVisible(true);
-        } else {
-          setRightLogoVisible(false);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
+    targets.forEach((target) => {
+      observer.observe(target);
+    });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      targets.forEach((target) => {
+        observer.unobserve(target);
+      });
     };
   }, []);
 
@@ -53,16 +39,12 @@ const MainPage = () => {
       <img className="about_hl" src={about_hl} alt="about_hl" />
       <img className="mid_banner" src={midBanner} alt="mid_banner" />
       <div className="logos">
-        <img
-          className={`logo_mean_left ${leftLogoVisible ? "visible" : ""}`}
-          src={logo_mean_left}
-          alt="logo_meaning_left"
-        />
-        <img
-          className={`logo_mean_right ${rightLogoVisible ? "visible" : ""}`}
-          src={logo_mean_right}
-          alt="logo_meaning_right"
-        />
+        <div className={`logo_mean_left ${Visible ? "o" : ""}`}>
+          <img src={logo_mean_left} alt="logo_meaning_left" />
+        </div>
+        <div className={`logo_mean_right ${Visible ? "o" : ""}`}>
+          <img src={logo_mean_right} alt="logo_mean_right" />
+        </div>
       </div>
     </div>
   );

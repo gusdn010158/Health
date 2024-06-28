@@ -53,22 +53,25 @@ button {
 
 .logo_mean_left {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateX(-250px);
   transition-property: opacity, transform;
   transition-duration: 1s;
   transition-timing-function: ease;
 }
 
+.logo_mean_left.o {
+  opacity: 1;
+  transform: translateX(-150px);
+}
 .logo_mean_right {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(100px);
   transition-property: opacity, transform;
   transition-duration: 1s;
   transition-timing-function: ease;
 }
 
-.logo_mean_left.visible,
-.logo_mean_right.visible {
+.logo_mean_right.o {
   opacity: 1;
   transform: translateX(0);
 }
