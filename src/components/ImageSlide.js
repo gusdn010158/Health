@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ad_1 from "./img/ad_1.png";
 import ad_2 from "./img/ad_2.png";
-
+import "./MainPage.css";
 const ImageSlider = () => {
   return (
     <div className="imageSlide">

@@ -1,6 +1,14 @@
+.top-banner {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.imageSlide {
+  margin-top: 60px;
+}
 .banner {
   display: flex;
- 
+
   justify-content: space-between;
   z-index: 100;
   align-items: center;

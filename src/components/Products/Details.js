@@ -1,57 +1,26 @@
 import { React, useEffect, useState } from "react";
 import "./Details.css";
-import logo from "../img/mainlogo.jpg";
-import { FiSearch } from "react-icons/fi";
-import { Link, useParams } from "react-router-dom";
-import { AiFillShopping } from "react-icons/ai";
+import { useParams } from "react-router-dom";
 import axios from "axios";
-function Details2({ apipoint }) {
-  const { id } = useParams();
+import Header from "../Header";
+
+function Details() {
+  const { apipoint, id } = useParams();
   const [entires, setEntires] = useState(null);
+
   useEffect(() => {
     axios.get(`http://localhost:4000/${apipoint}/${id}`).then((response) => {
       setEntires(response.data);
     });
-  }, [id]);
+  }, [apipoint, id]);
+
   if (!entires) {
     return <div>Loading...</div>;
   }
+
   return (
     <div className="Details">
-      <div className="Sheader1">
-        <div className="Sheader">
-          <div className="s_logo">
-            <Link to="/">
-              <img src={logo} alt="logo" />
-            </Link>
-          </div>
-
-          <div className="s_input">
-            <input placeholder="원하시는 상품을 검색해 보세요" />{" "}
-            <button>
-              <FiSearch size="22" />
-            </button>
-          </div>
-          <div className="s_login">
-            <Link to="/Cart" style={{ textDecoration: "none", color: "black" }}>
-              <AiFillShopping size="33" />
-            </Link>
-            <Link
-              to="/Login"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <div className="s_log">LOGIN</div>
-            </Link>
-            <Link
-              to="/Signup"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <div className="s_log">SIGN UP</div>
-            </Link>
-          </div>
-        </div>
-      </div>
-
+      <Header />
       <div className="detail_body">
         <div className="detail_body_center">
           <div className="center_right">
@@ -86,4 +55,4 @@ function Details2({ apipoint }) {
   );
 }
 
-export default Details2;
+export default Details;

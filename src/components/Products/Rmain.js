@@ -1,14 +1,14 @@
 import { React, useEffect, useState } from "react";
 import "./Rmain.css";
-
-function Rmain({ apipoint }) {
+import { useParams } from "react-router-dom";
+function Rmain() {
   const [gym, setGym] = useState([]);
-
+  const { apipoint } = useParams();
   useEffect(() => {
     fetch(`http://localhost:4000/${apipoint}`)
       .then((response) => response.json())
       .then((data) => setGym(data));
-  }, [apipoint]); // apipoint를 종속성 배열에 추가
+  }, [apipoint]);
 
   return (
     <div className="Rap_main">

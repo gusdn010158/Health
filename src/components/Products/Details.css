@@ -1,13 +1,13 @@
 .Details {
   background-color: #ffff;
-  min-width: 100vh;
+  min-width: 100vw;
   min-height: 100vh;
   display: flex;
 }
 .detail_body {
   box-sizing: border-box;
-  height: 800px;
-  width: 1600px;
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

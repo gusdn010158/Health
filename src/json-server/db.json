@@ -296,6 +296,55 @@
       "price": "800"
     }
   ],
+
+  "WOMAN": [
+    {
+      "id": "1",
+      "img": "https://andar.co.kr/web/product/small/202303/bbfe47bb11413fcc1f24283eaf759442.jpg",
+      "name": "손목보호대",
+      "price": "123154"
+    }
+  ],
+  "WLE": [
+    {
+      "id": "6",
+      "img": "https://andar.co.kr/web/product/medium/202106/040e4f46d500cdc1703517abb2b0aa0a.jpg",
+      "name": "비닐 요가 매트",
+      "price": "800"
+    }
+  ],
+  "WJO": [
+    {
+      "id": "5",
+      "img": "https://andar.co.kr/web/product/medium/202205/df3cad6a6a569883caf64053e40ad5a3.jpg",
+      "name": "나무 마사지 볼",
+      "price": "8500"
+    }
+  ],
+  "WOUTER": [
+    {
+      "id": "4",
+      "img": "https://andar.co.kr/web/product/small/202303/72a0fbd95c55b96d2bb1b9d653fe6192.jpg",
+      "name": "폼 롤러",
+      "price": "120300"
+    }
+  ],
+  "WB": [
+    {
+      "id": "3",
+      "img": "https://andar.co.kr/web/product/small/202303/3549915671c81d71e228982dc0e11b5a.jpg",
+      "name": "요가매트",
+      "price": "1000"
+    }
+  ],
+  "WT": [
+    {
+      "id": "2",
+      "img": "https://andar.co.kr/web/product/medium/202010/cffb58d95d0a3361257758c977b2bbd9.jpg",
+      "name": "마사지 볼",
+      "price": "123000"
+    }
+  ],
   "AIDS": [
     {
       "id": "1",
@@ -510,7 +559,7 @@
       "price": 20000
     }
   ],
-  "pilates": [
+  "Pilates": [
     {
       "id": "1",
       "name": "자마이카휘트니스",
@@ -561,7 +610,7 @@
       "price": 37000
     }
   ],
-  "golf": [
+  "Golf": [
     {
       "id": "1",
       "name": "자마이카휘트니스",
@@ -605,7 +654,7 @@
       "price": 50000
     }
   ],
-  "yoga": [
+  "Yoga": [
     {
       "id": "1",
       "name": "자마이카휘트니스",

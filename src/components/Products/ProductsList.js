@@ -1,10 +1,10 @@
 import { React, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./ProductsList.css";
 
-function ProductsList({ apipoint }) {
+function ProductsList() {
   const [products, setProducts] = useState([]);
-
+  const { apipoint } = useParams();
   useEffect(() => {
     fetch(`http://localhost:4000/${apipoint}`)
       .then((response) => response.json())
@@ -18,7 +18,7 @@ function ProductsList({ apipoint }) {
           {products.map((product) => (
             <div className="main_1" key={product.id}>
               <Link
-                to={`/products/${apipoint}/${product.id}`}
+                to={`/Products/${apipoint}/${product.id}`}
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <img
