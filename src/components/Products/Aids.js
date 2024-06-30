@@ -34,7 +34,7 @@ const Aids = () => {
         </div>
       </div>
       <Routes>
-        <Route path="gym/*" element={<Rmain apipoint="gym" />}></Route>
+        <Route path="gym" element={<Rmain apipoint="gym" />}></Route>
         <Route path="Pilates" element={<Rmain apipoint="pilates" />}></Route>
         <Route path="Golf" element={<Rmain apipoint="golf" />}></Route>
         <Route path="Yoga" element={<Rmain apipoint="yoga" />}></Route>

@@ -176,17 +176,12 @@ function Products() {
 
       <Routes>
         <Route path="/*" element={<Productsmain />} />
-        <Route
-          path="/manentire/*"
-          element={<ProductsList apipoint="massage" />}
-        />
-        <Route path="/mantop" element={<ProductsList apipoint="products" />} />
-        <Route path="/manpants" element={<ProductsList apipoint="massage" />} />
-        <Route
-          path="/manouter"
-          element={<ProductsList apipoint="products" />}
-        />
-        <Route path="/manset" element={<ProductsList apipoint="massage" />} />
+        <Route path="/manentire/*" element={<ProductsList apipoint="Man" />} />
+        <Route path="/mantop" element={<ProductsList apipoint="MT" />} />
+        <Route path="/manpants" element={<ProductsList apipoint="MB" />} />
+        <Route path="/manouter" element={<ProductsList apipoint="MOUTER" />} />
+        <Route path="/manset" element={<ProductsList apipoint="MSET" />} />
+
         <Route path="/wentire" element={<ProductsList apipoint="products" />} />
         <Route
           path="/wleggings"
@@ -196,14 +191,12 @@ function Products() {
         <Route path="/wouter" element={<ProductsList apipoint="massage" />} />
         <Route path="/wpants" element={<ProductsList apipoint="products" />} />
         <Route path="/wtops" element={<ProductsList apipoint="massage" />} />
-        <Route
-          path="/Aidsentire"
-          element={<ProductsList apipoint="products" />}
-        />
-        <Route path="/Belt" element={<ProductsList apipoint="massage" />} />
-        <Route path="/Strap" element={<ProductsList apipoint="products" />} />
-        <Route path="/Mat" element={<ProductsList apipoint="massage" />} />
-        <Route path="/Aids/*" element={<Aids />} />
+
+        <Route path="/Aidsentire" element={<ProductsList apipoint="AIDS" />} />
+        <Route path="/Belt" element={<ProductsList apipoint="BELT" />} />
+        <Route path="/Strap" element={<ProductsList apipoint="STRAP" />} />
+        <Route path="/Mat" element={<ProductsList apipoint="MET" />} />
+        <Route path="/Aids" element={<Aids />} />
       </Routes>
     </div>
   );
