@@ -1,6 +1,8 @@
 import React from "react";
 import "./Aids.css";
+
 import { Link, Route, Routes } from "react-router-dom";
+
 import Rmain from "./Rmain";
 
 const Aids = () => {
@@ -34,9 +36,12 @@ const Aids = () => {
         </div>
       </div>
       <Routes>
-        <Route path="Products/Health/:apipoint" element={<Rmain />} />
+        <Route path="/gym/*" element={<Rmain />}></Route>
+        <Route path="/Pilates" element={<Rmain />}></Route>
+        <Route path="/Golf" element={<Rmain />}></Route>
+        <Route path="/Yoga" element={<Rmain />}></Route>
       </Routes>
-      <div className="pagination-box">
+      <div class="pagination-box">
         <a className="paging_btn">1</a>
         <a className="paging_btn">2</a>
         <a className="paging_btn">3</a>

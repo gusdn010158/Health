@@ -1,12 +1,9 @@
 import "./Products.css";
-import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, Routes, Route } from "react-router-dom";
 import Productsmain from "./Productsmain";
 import Aids from "./Aids";
-
-import ProductsList from "./ProductsList"; // 공통 컴포넌트 임포트
+import ProductsList from "./ProductsList";
 import Header from "../Header";
 
 function Products() {
@@ -39,7 +36,6 @@ function Products() {
             <Link to="MB" style={{ textDecoration: "none", color: "black" }}>
               <li className="show-menu1">하의</li>
             </Link>
-
             <Link
               to="MOUTER"
               style={{ textDecoration: "none", color: "black" }}
@@ -106,9 +102,9 @@ function Products() {
       </aside>
 
       <Routes>
-        <Route path="/*" element={<Productsmain />} />
+        <Route path="/" element={<Productsmain />} />
         <Route path="/:apipoint" element={<ProductsList />} />
-        <Route path="/Health/*" element={<Aids />} />
+        <Route path="/Health" element={<Aids />}></Route>
       </Routes>
     </div>
   );
