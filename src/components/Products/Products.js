@@ -10,11 +10,12 @@ function Products() {
   const [isOpen, setMenu] = useState(false);
   const [isOpe, setMen] = useState(false);
   const [isOp, setMe] = useState(false);
+  const [isO, setM] = useState(false);
 
   const toggleMenu = () => setMenu(!isOpen);
   const toggleMen = () => setMen(!isOpe);
   const toggleMe = () => setMe(!isOp);
-
+  const toggleM = () => setM(!isO);
   return (
     <div className="Products">
       <Header />
@@ -95,16 +96,38 @@ function Products() {
           </ul>
         </div>
         <div>
-          <Link to="Health" style={{ textDecoration: "none", color: "black" }}>
-            <h3 className="main_gym">헬스장</h3>
-          </Link>
+          <h3 className="main_aids" onClick={toggleM}>
+            헬스장
+          </h3>
+          <ul className={isO ? "sho" : "hid"}>
+            <Link
+              to="Health"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <li className="sho1">헬스장</li>
+            </Link>
+            <Link
+              to="Pilates"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <li className="sho1">필라테스</li>
+            </Link>
+            <Link to="Yoga" style={{ textDecoration: "none", color: "black" }}>
+              <li className="sho1">요가</li>
+            </Link>
+          </ul>
         </div>
       </aside>
 
       <Routes>
         <Route path="/" element={<Productsmain />} />
         <Route path="/:apipoint" element={<ProductsList />} />
-        <Route path="/Health" element={<Aids />}></Route>
+        <Route path="/Health" element={<Aids point="Health" name="헬스장" />} />
+        <Route
+          path="/Pilates"
+          element={<Aids point="Pilates" name="필라테스" />}
+        />
+        <Route path="/Yoga" element={<Aids point="Yoga" name="요가" />} />
       </Routes>
     </div>
   );

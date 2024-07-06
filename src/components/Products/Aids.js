@@ -1,22 +1,22 @@
 import "./Aids.css";
 import React, { useEffect, useState } from "react";
 
-const Aids = () => {
+const Aids = ({ point, name }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/gym")
+    fetch(`http://localhost:4000/${point}`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  }, [point]);
 
   return (
     <div className="Aids">
       <div className="rap_head">
         <div className="rap_hr"></div>
         <div className="rap_header">
-          <h1>-헬스장-</h1>
+          <h1>-{name}-</h1>
         </div>
 
         <div className="rap_select">
