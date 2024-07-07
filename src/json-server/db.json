@@ -308,20 +308,110 @@
       "img": "https://andar.co.kr/web/product/small/202303/bbfe47bb11413fcc1f24283eaf759442.jpg",
       "name": "손목보호대",
       "price": "123154"
+    },
+    {
+      "id": "2",
+      "img": "https://asset.m-gs.kr/prod/1041650538/1/550",
+      "name": "손목보호대",
+      "price": "123154"
+    },
+    {
+      "id": "3",
+      "img": "https://cdn.ownerclan.com/4PKtKkFtS5EGEfZPBR9iRfBopdyd_IFD7uCxZkbp2IY/marketize/auto/as/v1.jpg",
+      "name": "손목보호대",
+      "price": "123154"
+    },
+    {
+      "id": "4",
+      "img": "https://img.29cm.co.kr/item/202312/11ee94a495b0e6c8b2385b58698f0f74.jpg?width=700",
+      "name": "손목보호대",
+      "price": "123154"
+    },
+    {
+      "id": "5",
+      "img": "https://sitem.ssgcdn.com/24/78/21/item/1000561217824_i1_750.jpg",
+      "name": "손목보호대",
+      "price": "123154"
+    },
+    {
+      "id": "6",
+      "img": "https://gd.image-gmkt.com/%ED%94%84%EB%A6%B4%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4-%EC%97%AC%EC%9E%90%EC%85%94%EC%B8%A0-%EA%B2%A8%EC%9A%B8-%EC%BA%90%EC%A5%AC%EC%96%BC-%EC%97%AC%EC%9E%90%EC%98%B7%EC%BD%94%EB%94%94-%EB%82%A8%EB%B0%A9/li/468/966/1996966468.g_350-w-et-pj_g.jpg",
+      "name": "손목보호대",
+      "price": "123154"
+    },
+    {
+      "id": "7",
+      "img": "https://m.w-girlz.co.kr/web/product/big/202303/03cc82650adfb85cdb3a0a827fee8be4.jpg",
+      "name": "손목보호대",
+      "price": "123154"
+    },
+    {
+      "id": "8",
+      "img": "https://asset.m-gs.kr/prod/1045937796/1/550",
+      "name": "손목보호대",
+      "price": "123154"
     }
   ],
   "WLE": [
     {
-      "id": "6",
-      "img": "https://andar.co.kr/web/product/medium/202106/040e4f46d500cdc1703517abb2b0aa0a.jpg",
+      "id": "1",
+      "img": "https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/5683968839/B.jpg?129000000",
+      "name": "비닐 요가 매트",
+      "price": "800"
+    },
+    {
+      "id": "2",
+      "img": "https://sitem.ssgcdn.com/23/60/79/item/1000398796023_i1_750.jpg",
+      "name": "비닐 요가 매트",
+      "price": "800"
+    },
+    {
+      "id": "3",
+      "img": "https://sitem.ssgcdn.com/37/93/17/item/1000355179337_i1_750.jpg",
+      "name": "비닐 요가 매트",
+      "price": "800"
+    },
+    {
+      "id": "4",
+      "img": "https://qi-o.qoo10cdn.com/goods_image_big/2/4/2/7/7556502427e_l.jpg",
+      "name": "비닐 요가 매트",
+      "price": "800"
+    },
+    {
+      "id": "5",
+      "img": "https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/4490607125/B.jpg?735000000",
       "name": "비닐 요가 매트",
       "price": "800"
     }
   ],
   "WJO": [
     {
+      "id": "1",
+      "img": "https://image2.lotteimall.com/goods/72/76/72/12727672_1.jpg/dims/resizemc/550x550/optimize",
+      "name": "나무 마사지 볼",
+      "price": "8500"
+    },
+    {
+      "id": "2",
+      "img": "https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/3394436014/B.jpg?607000000",
+      "name": "나무 마사지 볼",
+      "price": "8500"
+    },
+    {
+      "id": "3",
+      "img": "https://media.bunjang.co.kr/product/201588241_2_1665218027_w360.jpg",
+      "name": "나무 마사지 볼",
+      "price": "8500"
+    },
+    {
+      "id": "4",
+      "img": "https://img.shoppingntmall.com/goods/770/11503770_h.jpg",
+      "name": "나무 마사지 볼",
+      "price": "8500"
+    },
+    {
       "id": "5",
-      "img": "https://andar.co.kr/web/product/medium/202205/df3cad6a6a569883caf64053e40ad5a3.jpg",
+      "img": "https://sitem.ssgcdn.com/86/37/54/item/1000541543786_i1_750.jpg",
       "name": "나무 마사지 볼",
       "price": "8500"
     }
@@ -556,55 +646,90 @@
       "img": "https://watermark.lovepik.com/photo/20211126/large/lovepik-gym-picture_501088659.jpg",
       "local": "김포",
       "price": 20000
+    },
+    {
+      "id": "9",
+      "name": "인디언 마이 짐",
+      "img": "https://file2.nocutnews.co.kr/newsroom/image/2023/10/05/202310051712341717_0.jpg",
+      "local": "부산",
+      "price": 37000
+    },
+    {
+      "id": "10",
+      "name": "JR 휘트니스",
+      "img": "https://sports.idongjak.or.kr/File/Download/469fd2f515eb16beb44a5acb693f1f33",
+      "local": "김포",
+      "price": 20000
     }
   ],
   "Pilates": [
     {
       "id": "1",
       "name": "자마이카휘트니스",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRCF6BMKvoYSV2Rh3cDcgLxa1GTNsg7L_Heg&usqp=CAU",
+      "img": "https://mblogthumb-phinf.pstatic.net/MjAxODA0MTNfMTIx/MDAxNTIzNjE2MDM4MDk3.gEOhl2uMLY2FBSTiYmeBCY3iD9M8YxqRPnk32iyBg34g.4ElcBM2pEJHWRHGGr7zZqnTxiCyhahBBEa0ES3YqDZcg.JPEG.kcity0/%EC%B2%AD%EC%A3%BC%ED%97%AC%EC%8A%A4_%ED%9C%98%ED%8A%B8%EB%8B%88%EC%8A%A4_%EC%B2%AD%EC%A3%BC%EC%9A%94%EA%B0%80_%EC%B2%AD%EC%A3%BC%ED%95%84%EB%9D%BC%ED%85%8C%EC%8A%A4_%EC%B2%AD%EC%A3%BC%EC%8A%A4%ED%94%BC%EB%8B%9D_%2851%29.jpg?type=w800",
       "local": "서울",
       "price": 55000
     },
     {
       "id": "2",
       "name": "히트 라이프 짐",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-gbMjG6bfyBpQK2nUOcsdfCSIOq01yuighQ&usqp=CAU",
+      "img": "https://blog.kakaocdn.net/dn/UVJLF/btq1KBzkFZT/TNqUYcAm0G5DRMIWib9Nlk/img.jpg",
       "local": "대구",
       "price": 33000
     },
     {
       "id": "3",
       "name": "라이프 줄리엣 짐",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTYGRcfwij-a0milpXghT-cgp8PhwWpS2wfA&usqp=CAU",
+      "img": "https://app.kovihouse.com:444/_UpFile/_Board/_Kovian/_thumbnail/signmart1664430417800.jpg",
       "local": "경북",
       "price": 20000
     },
     {
       "id": "4",
       "name": "휘트니스 헬로우짐",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJSm3prpzzN2F4HQx16voHLG36i8FdQPETQ&usqp=CAU",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ODx9aWmkyBLI-tfjjJG-RiHfgjoFP1u46A&s",
       "local": "인천",
       "price": 35000
     },
     {
       "id": "5",
       "name": "테리온 휘트니스",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_oSg2UwjeX7BfpxsAXvt2xGQdbuXK6jgzbw&usqp=CAU",
+      "img": "https://www.ksponco.or.kr/sports/files/view?id=d18b1c1c-ab24-4bdc-9d64-b3f37183868d&seq=3",
       "local": "서울",
       "price": 45000
     },
     {
       "id": "6",
       "name": "아프로 휘트니스",
-      "img": "https://watermark.lovepik.com/photo/20211126/large/lovepik-gym-picture_501088658.jpg",
+      "img": "https://mblogthumb-phinf.pstatic.net/MjAxODA0MTNfMTIx/MDAxNTIzNjE2MDM4MjA2.LNcLeplfGBEqsVXI3NWWHqUfcVHME8bpwBnS4kp158wg.405fOzZPcJ7RGSVjbJmlO7P3EIhWDwRAedK9Y-R8_Xsg.JPEG.kcity0/%EC%B2%AD%EC%A3%BC%ED%97%AC%EC%8A%A4_%ED%9C%98%ED%8A%B8%EB%8B%88%EC%8A%A4_%EC%B2%AD%EC%A3%BC%EC%9A%94%EA%B0%80_%EC%B2%AD%EC%A3%BC%ED%95%84%EB%9D%BC%ED%85%8C%EC%8A%A4_%EC%B2%AD%EC%A3%BC%EC%8A%A4%ED%94%BC%EB%8B%9D_%2852%29.jpg?type=w800",
       "local": "서울",
       "price": 50000
     },
     {
       "id": "7",
       "name": "인디언 마이 짐",
-      "img": "https://img.seoul.co.kr//img/upload/2021/01/04/SSI_20210104143340.jpg",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbURHl7uE-qGMAUunNdbxQWLqBFVVs6QAYHg&s",
+      "local": "부산",
+      "price": 37000
+    },
+    {
+      "id": "8",
+      "name": "인디언 마이 짐",
+      "img": "https://ssproxy.ucloudbiz.olleh.com/v1/AUTH_e59809eb-bdc9-44d7-9d8f-2e7f0e47ba91/post_card/198655_1657003397_tZOGyC2E.png",
+      "local": "부산",
+      "price": 37000
+    },
+    {
+      "id": "9",
+      "name": "인디언 마이 짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWB8iSsoNcutkTdG5YEp6n9CXbVwFVLCZPcQ&s",
+      "local": "부산",
+      "price": 37000
+    },
+    {
+      "id": "10",
+      "name": "인디언 마이 짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwaC_O2ZAvcB0y1XSCLukIPIMOwt4I7OA6rg&s",
       "local": "부산",
       "price": 37000
     }
@@ -613,42 +738,70 @@
     {
       "id": "1",
       "name": "자마이카휘트니스",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRCF6BMKvoYSV2Rh3cDcgLxa1GTNsg7L_Heg&usqp=CAU",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfEBcERZ7ld6YHbRBMH-0fkr8DzF05fQMejw&s",
       "local": "서울",
       "price": 55000
     },
     {
       "id": "2",
       "name": "히트 라이프 짐",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-gbMjG6bfyBpQK2nUOcsdfCSIOq01yuighQ&usqp=CAU",
+      "img": "https://cdn.gukjenews.com/news/photo/201708/774652_559356_1911.jpg",
       "local": "대구",
       "price": 33000
     },
     {
       "id": "3",
       "name": "라이프 줄리엣 짐",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTYGRcfwij-a0milpXghT-cgp8PhwWpS2wfA&usqp=CAU",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgXfLs0LZFKwMDTK55J8iT6Jgoqgs_ScF99w&s",
       "local": "경북",
       "price": 20000
     },
     {
       "id": "4",
       "name": "휘트니스 헬로우짐",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJSm3prpzzN2F4HQx16voHLG36i8FdQPETQ&usqp=CAU",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr_pNEXvVdVVf6MH5nN8fLt5W6Ik_FpwkvWw&s",
       "local": "인천",
       "price": 35000
     },
     {
       "id": "5",
       "name": "테리온 휘트니스",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_oSg2UwjeX7BfpxsAXvt2xGQdbuXK6jgzbw&usqp=CAU",
+      "img": "https://www.dailysecu.com/news/photo/201806/35277_27861_5509.png",
       "local": "서울",
       "price": 45000
     },
     {
       "id": "6",
       "name": "아프로 휘트니스",
-      "img": "https://watermark.lovepik.com/photo/20211126/large/lovepik-gym-picture_501088658.jpg",
+      "img": "https://www.k-health.com/news/photo/202310/67605_73997_4155.jpg",
+      "local": "서울",
+      "price": 50000
+    },
+    {
+      "id": "7",
+      "name": "자마이카휘트니스",
+      "img": "data:image/jpeg;base64,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",
+      "local": "서울",
+      "price": 55000
+    },
+    {
+      "id": "8",
+      "name": "히트 라이프 짐",
+      "img": "https://blog.kakaocdn.net/dn/cQh50Y/btqGJFIZJra/5nw4Gk9ZGCTPeASKgKB7x0/img.jpg",
+      "local": "대구",
+      "price": 33000
+    },
+    {
+      "id": "9",
+      "name": "라이프 줄리엣 짐",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmhzYAyRP9DXozYcZNvbuhTCdqNxHuy0QE0w&s",
+      "local": "경북",
+      "price": 20000
+    },
+    {
+      "id": "10",
+      "name": "아프로 휘트니스",
+      "img": "https://i0.wp.com/onyogastudio.com/wp-content/uploads/2019/12/c700x420.jpg?resize=700%2C420&ssl=1",
       "local": "서울",
       "price": 50000
     }
