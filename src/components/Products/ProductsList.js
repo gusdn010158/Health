@@ -18,6 +18,7 @@ function ProductsList() {
           {products.map((product) => (
             <div className="main_1" key={product.id}>
               <Link
+                className="main1_link"
                 to={`/Products/${apipoint}/${product.id}`}
                 style={{ textDecoration: "none", color: "black" }}
               >
