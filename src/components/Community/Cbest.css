@@ -9,6 +9,7 @@
   overflow: scroll;
 }
 .cbest_main {
+  margin-top: 60px;
   box-sizing: border-box;
   width: 70%;
   height: 900px;
@@ -36,7 +37,7 @@
 }
 .choice > select {
   border-radius: 10px;
-  margin-left: 600px;
+  margin-left: 840px;
 }
 .cbest_input {
   height: 8%;
