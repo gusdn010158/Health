@@ -34,7 +34,7 @@ button {
 
 .logos {
   display: flex;
-  justify-content: center;
+  width: 100vw;
 }
 
 .banner_btnItems {
@@ -61,12 +61,12 @@ button {
 
 .logo_mean_left.o {
   opacity: 1;
-  width: 50%;
-  transform: translateX(10px);
+  width: 100vw;
+  transform: translateX(100px);
 }
 .logo_mean_right {
   opacity: 0;
-  transform: translateX(0px);
+  transform: translateX(100px);
   transition-property: opacity, transform;
   transition-duration: 1s;
   transition-timing-function: ease;
@@ -74,11 +74,18 @@ button {
 
 .logo_mean_right.o {
   opacity: 1;
-  width: 50%;
+  width: 100vw;
   transform: translateX(-50px);
 }
 
 .MainPage {
   height: 950px;
   overflow: scroll;
+}
+.imageSlide {
+}
+.d-block {
+  width: 100vw;
+  object-fit: cover;
+  height: 600px;
 }

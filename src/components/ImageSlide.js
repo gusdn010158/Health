@@ -9,10 +9,10 @@ const ImageSlider = () => {
     <div className="imageSlide">
       <Carousel>
         <Carousel.Item>
-          <img className="d-block w-100" src={ad_1} alt="image1" />
+          <img className="d-block" src={ad_1} alt="image1" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={ad_2} alt="image2" />
+          <img className="d-block" src={ad_2} alt="image2" />
         </Carousel.Item>
       </Carousel>
     </div>
