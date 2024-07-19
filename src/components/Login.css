@@ -73,7 +73,7 @@ form .txt_field {
 
 .txt_field input:focus ~ label,
 .txt_field input:valid ~ label {
-  top: -5px;
+  top: -15px;
   color: #b98eff;
 }
 
