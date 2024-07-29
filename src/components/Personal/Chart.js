@@ -7,7 +7,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend
+  Legend,
 } from "recharts";
 
 const data = [
@@ -20,20 +20,10 @@ const data = [
   { day: "30일", kg: 77.6 },
 ];
 
-const lineChart = {
-  width: "500px",
-  height: "300px",
-  margin: "5px 30px 5px 5px"
-}
-
 export default function Chart() {
   return (
     <div className="chart-container">
-      <LineChart
-        width={500}
-        height={300}
-        data={data}
-      >
+      <LineChart width={500} height={300} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="day" />
         <YAxis domain={[76, 82]} />
