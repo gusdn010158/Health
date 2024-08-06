@@ -6,19 +6,9 @@ import Chart from "./Chart";
 import Header from "../Header";
 import Calendar from "react-calendar";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import TileContent from "./TileContent";
 
 const Personal = () => {
-  const tileClassName = ({ date }) => {
-    if (date.getDay() === 0) {
-      return "sundayTile";
-    } else if (date.getDay() === 6) {
-      return "saturdayTile";
-    } else if (date.getMonth() === value.getMonth()) {
-      return "currentMonthTile";
-    }
-    return null;
-  };
-
   const no = useRef(1);
 
   const [todos, setTodos] = useState([]);
@@ -52,6 +42,17 @@ const Personal = () => {
     );
   };
 
+  const tileClassName = ({ date }) => {
+    if (date.getDay() === 0) {
+      return "sundayTile";
+    } else if (date.getDay() === 6) {
+      return "saturdayTile";
+    } else if (date.getMonth() === value.getMonth()) {
+      return "currentMonthTile";
+    }
+    return null;
+  };
+
   return (
     <div>
       <Header />
@@ -76,9 +77,9 @@ const Personal = () => {
             prevLabel={<HiChevronLeft />}
             next2Label={null}
             prev2Label={null}
-            tileClassName={({ date }) => tileClassName({ date })}
+            tileClassName={tileClassName}
             tileContent={({ date }) => (
-              <div className={`currentMonthTile ${tileClassName({ date })}`} />
+              <TileContent date={date} tileClassName={tileClassName} />
             )}
           />
         </div>
