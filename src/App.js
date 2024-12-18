@@ -5,7 +5,7 @@ import Login from "./components/Login";
 import Products from "./components/Products/Products";
 import Community from "./components/Community/Community";
 import Signup from "./components/Signup";
-import Cart from "./components/Cart";
+
 import Home from "./components/MyHome/Home";
 import Details from "./components/Products/Details"; // 파일명에 맞게 import 수정
 import MainPage from "./components/MainPage";
@@ -20,7 +20,7 @@ export default function App() {
         <Route path="/Products/*" element={<Products />} />
         <Route path="/Community/*" element={<Community />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Cart" element={<Cart />} />
+
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Personal" element={<Personal />} />
         <Route path="/Home" element={<Home />} />

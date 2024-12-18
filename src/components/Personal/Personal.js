@@ -7,7 +7,7 @@ import Header from "../Header";
 import Calendar from "react-calendar";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import TileContent from "./TileContent";
-
+import { Link } from "react-router-dom";
 const Personal = () => {
   const no = useRef(1);
 
@@ -82,6 +82,10 @@ const Personal = () => {
               <TileContent date={date} tileClassName={tileClassName} />
             )}
           />
+
+          <Link to="/Home" className="flinkbtn">
+            내 정보로
+          </Link>
         </div>
       </div>
     </div>

@@ -20,7 +20,15 @@
   color: white;
   border-radius: 10px 10px 50% 50%;
 }
-
+.flinkbtn {
+  background: rgb(203, 170, 254);
+  padding: 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin-left: 30px;
+}
 /* 아래 코드는 calendar에 대한 css입니다. */
 .react-calendar {
   border-radius: 1rem;

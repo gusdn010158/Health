@@ -2,6 +2,14 @@
   margin-top: 5px;
 }
 .crud_first {
+  text-decoration: none;
+  color: black;
+  display: Flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.rhrh {
   display: Flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +23,10 @@
   min-width: 20%;
   border: none;
   background-color: #ffff;
+}
+.rhrh:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
 }
 
 .btn_view_post {
