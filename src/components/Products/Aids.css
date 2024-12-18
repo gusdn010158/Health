@@ -212,3 +212,13 @@
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
+.rap_select {
+  background-color: white;
+  display: Flex;
+  text-decoration: none;
+  color: #8a8a8a;
+  position: absolute;
+  bottom: 650px;
+  right: 50px;
+  box-shadow: 5px 5px 20px lightgray;
+}
