@@ -67,7 +67,7 @@ const Personal = () => {
             <TodoList todos={todos} onDel={onDel} onToggle={onToggle} />
           </div>
         </div>
-        <div className="personal_rightSide">
+        <div>
           <Calendar
             className="calendar-parent"
             value={value}
