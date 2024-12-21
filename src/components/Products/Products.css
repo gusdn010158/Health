@@ -60,28 +60,6 @@ li {
   list-style: none;
   font-family: "oneFont";
 }
-.show-menu {
-  background-color: #ffff;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 130px;
-  position: relative;
-  transition: 0.1s;
-}
-.show-menu1:hover {
-  background-color: #e5c7fb;
-}
-
-.hide-menu {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 0px;
-  position: relative;
-  left: -250px;
-  transition: 0.1s;
-}
 
 .main_woman {
   font-family: "oneFontTitle";
@@ -93,32 +71,7 @@ li {
   align-items: center;
 }
 
-.show {
-  background-color: #ffff;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 160px;
-  position: relative;
-  left: 0px;
-  transition: 0.1s;
-}
-.show1:hover {
-  background-color: #e5c7fb;
-}
-
-.hide {
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 0px;
-  position: relative;
-  left: -150px;
-  transition: 0.1s;
-}
-
-.main_aids {
+.main_title {
   font-family: "oneFontTitle";
   background-color: #b98eff;
   margin-top: 0px;
@@ -127,21 +80,21 @@ li {
   justify-content: space-around;
   align-items: center;
 }
-.sho {
+.show-menu {
   background-color: #ffff;
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 110px;
+
   position: relative;
   left: 0px;
   transition: 0.1s;
 }
-.sho1:hover {
+.menu_item:hover {
   background-color: #e5c7fb;
 }
 
-.hid {
+.hide-menu {
   opacity: 0;
   padding: 0;
   margin: 0;

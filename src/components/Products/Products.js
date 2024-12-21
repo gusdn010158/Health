@@ -7,118 +7,10 @@ import ProductsList from "./ProductsList";
 import Header from "../Header";
 
 function Products() {
-  const [isOpen, setMenu] = useState(false);
-  const [isOpe, setMen] = useState(false);
-  const [isOp, setMe] = useState(false);
-  const [isO, setM] = useState(false);
-
-  const toggleMenu = () => setMenu(!isOpen);
-  const toggleMen = () => setMen(!isOpe);
-  const toggleMe = () => setMe(!isOp);
-  const toggleM = () => setM(!isO);
   return (
     <div className="Products">
       <Header />
-      <aside className="aside_menu">
-        <Link to="/Products" style={{ textDecoration: "none" }}>
-          <h1 className="main_main">메인으로</h1>
-        </Link>
-        <div>
-          <h3 className="main_man" onClick={toggleMenu}>
-            남성의류
-          </h3>
-          <ul className={isOpen ? "show-menu" : "hide-menu"}>
-            <Link to="Man" style={{ textDecoration: "none", color: "black" }}>
-              <li className="show-menu1">전체</li>
-            </Link>
-            <Link to="MT" style={{ textDecoration: "none", color: "black" }}>
-              <li className="show-menu1">상의</li>
-            </Link>
-            <Link to="MB" style={{ textDecoration: "none", color: "black" }}>
-              <li className="show-menu1">하의</li>
-            </Link>
-            <Link
-              to="MOUTER"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <li className="show-menu1">아우터</li>
-            </Link>
-            <Link to="MSET" style={{ textDecoration: "none", color: "black" }}>
-              <li className="show-menu1">세트</li>
-            </Link>
-          </ul>
-        </div>
-        <div>
-          <h3 className="main_woman" onClick={toggleMen}>
-            여성의류
-          </h3>
-          <ul className={isOpe ? "show" : "hide"}>
-            <Link to="WOMAN" style={{ textDecoration: "none", color: "black" }}>
-              <li className="show1">전체</li>
-            </Link>
-            <Link to="WLE" style={{ textDecoration: "none", color: "black" }}>
-              <li className="show1">레깅스</li>
-            </Link>
-            <Link to="WJO" style={{ textDecoration: "none", color: "black" }}>
-              <li className="show1">조거팬츠</li>
-            </Link>
-            <Link
-              to="WOUTER"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <li className="show1">아우터</li>
-            </Link>
-            <Link to="WB" style={{ textDecoration: "none", color: "black" }}>
-              <li className="show1">하의</li>
-            </Link>
-            <Link to="WT" style={{ textDecoration: "none", color: "black" }}>
-              <li className="show1">상의</li>
-            </Link>
-          </ul>
-        </div>
-        <div>
-          <h3 className="main_aids" onClick={toggleMe}>
-            보조기구
-          </h3>
-          <ul className={isOp ? "sho" : "hid"}>
-            <Link to="AIDS" style={{ textDecoration: "none", color: "black" }}>
-              <li className="sho1">전체</li>
-            </Link>
-            <Link to="BELT" style={{ textDecoration: "none", color: "black" }}>
-              <li className="sho1">벨트</li>
-            </Link>
-            <Link to="STRAP" style={{ textDecoration: "none", color: "black" }}>
-              <li className="sho1">스트랩</li>
-            </Link>
-            <Link to="MET" style={{ textDecoration: "none", color: "black" }}>
-              <li className="sho1">매트</li>
-            </Link>
-          </ul>
-        </div>
-        <div>
-          <h3 className="main_aids" onClick={toggleM}>
-            헬스장
-          </h3>
-          <ul className={isO ? "sho" : "hid"}>
-            <Link
-              to="Health"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <li className="sho1">헬스장</li>
-            </Link>
-            <Link
-              to="Pilates"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <li className="sho1">필라테스</li>
-            </Link>
-            <Link to="Yoga" style={{ textDecoration: "none", color: "black" }}>
-              <li className="sho1">요가</li>
-            </Link>
-          </ul>
-        </div>
-      </aside>
-
+      <AsideMenu />
       <Routes>
         <Route path="/" element={<Productsmain />} />
         <Route path="/:apipoint" element={<ProductsList />} />
@@ -129,6 +21,84 @@ function Products() {
         />
         <Route path="/Yoga" element={<Aids point="Yoga" name="요가" />} />
       </Routes>
+    </div>
+  );
+}
+
+function AsideMenu() {
+  const menus = [
+    {
+      title: "남성의류",
+      items: [
+        { path: "Man", label: "전체" },
+        { path: "MT", label: "상의" },
+        { path: "MB", label: "하의" },
+        { path: "MOUTER", label: "아우터" },
+        { path: "MSET", label: "세트" },
+      ],
+    },
+    {
+      title: "여성의류",
+      items: [
+        { path: "WOMAN", label: "전체" },
+        { path: "WLE", label: "레깅스" },
+        { path: "WJO", label: "조거팬츠" },
+        { path: "WOUTER", label: "아우터" },
+        { path: "WB", label: "하의" },
+        { path: "WT", label: "상의" },
+      ],
+    },
+    {
+      title: "보조기구",
+      items: [
+        { path: "AIDS", label: "전체" },
+        { path: "BELT", label: "벨트" },
+        { path: "STRAP", label: "스트랩" },
+        { path: "MET", label: "매트" },
+      ],
+    },
+    {
+      title: "헬스장",
+      items: [
+        { path: "Health", label: "헬스장" },
+        { path: "Pilates", label: "필라테스" },
+        { path: "Yoga", label: "요가" },
+      ],
+    },
+  ];
+
+  return (
+    <aside className="aside_menu">
+      <Link to="/Products" style={{ textDecoration: "none" }}>
+        <h1 className="main_main">메인으로</h1>
+      </Link>
+      {menus.map((menu, index) => (
+        <DropdownMenu key={index} title={menu.title} items={menu.items} />
+      ))}
+    </aside>
+  );
+}
+
+function DropdownMenu({ title, items }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <h3 className="main_title" onClick={toggleMenu}>
+        {title}
+      </h3>
+      <ul className={isOpen ? "show-menu" : "hide-menu"}>
+        {items.map((item, index) => (
+          <Link
+            key={index}
+            to={item.path}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <li className="menu_item">{item.label}</li>
+          </Link>
+        ))}
+      </ul>
     </div>
   );
 }
