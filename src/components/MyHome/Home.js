@@ -56,7 +56,7 @@ function Home() {
           <div className="Home_Profile1"></div>
         </div>
         <div className="Home_name">
-          <h2>권해수 님</h2>
+          <h2>000 님</h2>
           <p>반갑습니다</p>
         </div>
         {tiemms.map((item, index) => (

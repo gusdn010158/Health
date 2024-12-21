@@ -4,7 +4,9 @@ import Cmain_map from "./Cmain_map";
 import { Link, Route, Routes } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import Cbest from "./Cbest";
+
 function Cmain() {
+  const rule = ["근력강화", "식단조절", "체중감량량"];
   return (
     <div className="Cmain">
       <div className="cmain_main">
@@ -18,15 +20,11 @@ function Cmain() {
                 카테고리를 선택하세요
               </a>
               <ul className="options_container">
-                <li className="option_parent">
-                  <a>근력강화</a>
-                </li>
-                <li className="option_parent">
-                  <a>식단조절</a>
-                </li>
-                <li className="option_parent">
-                  <a>체중감량</a>
-                </li>
+                {rule.map((item) => (
+                  <li className="option_parent">
+                    <a>{item}</a>
+                  </li>
+                ))}
               </ul>
             </li>
           </ul>
@@ -54,11 +52,13 @@ function Cmain() {
             </div>
           </div>
         </div>
-        <div class="pagination-box">
-          <a className="paging_btn">1</a>
-          <a className="paging_btn">2</a>
-          <a className="paging_btn">3</a>
-          <a className="paging_btn">4</a>
+
+        <div className="pagination-box">
+          {[1, 2, 3, 4].map((page) => (
+            <a key={page} className="paging_btn">
+              {page}
+            </a>
+          ))}
         </div>
       </div>
 
