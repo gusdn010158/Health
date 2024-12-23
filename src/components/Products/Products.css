@@ -46,29 +46,9 @@
   border: 0px;
 }
 
-.main_man {
-  font-family: "oneFontTitle";
-  background-color: #b98eff;
-  margin-top: 0px;
-  color: #ffff;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 li {
   list-style: none;
   font-family: "oneFont";
-}
-
-.main_woman {
-  font-family: "oneFontTitle";
-  background-color: #b98eff;
-  margin-top: 0px;
-  color: #ffff;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .main_title {
@@ -103,23 +83,4 @@ li {
   position: relative;
   left: -150px;
   transition: 0.1s;
-}
-
-.main_gym {
-  font-family: "oneFontTitle";
-  background-color: #b98eff;
-  margin-top: 0px;
-  color: #ffff;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.gym_button {
-  background-color: white;
-  border: 0px;
-}
-
-.aside_menu > div > div {
-  margin: 5px;
-  padding-left: 10px;
 }
