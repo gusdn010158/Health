@@ -7,7 +7,7 @@ import Header from "../Header";
 function Details() {
   const { apipoint, id } = useParams();
   const [entires, setEntires] = useState(null);
-
+  const [quantity, setQuantity] = useState(0);
   useEffect(() => {
     axios.get(`http://localhost:4000/${apipoint}/${id}`).then((response) => {
       setEntires(response.data);
@@ -17,7 +17,13 @@ function Details() {
   if (!entires) {
     return <div>Loading...</div>;
   }
+  const incrementQuantity = () => {
+    setQuantity((prev) => prev + 1);
+  };
 
+  const decrementQuantity = () => {
+    setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
+  };
   return (
     <div className="Details">
       <Header />
@@ -32,9 +38,9 @@ function Details() {
             <div className="center_left_t">택배 배송/ 무료 배송</div>
             <hr></hr>
             <div className="center_left_num">
-              <button>-</button>
-              <div>1</div>
-              <button>+</button>
+              <button onClick={decrementQuantity}>-</button>
+              <div>{quantity}</div>
+              <button onClick={incrementQuantity}>+</button>
             </div>
             <hr></hr>
             <div className="center_left_sum">

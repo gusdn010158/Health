@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 const Aids = ({ point, name }) => {
   const [data, setData] = useState([]);
-
+  const totalPages = 4;
   useEffect(() => {
     fetch(`http://localhost:4000/${point}`)
       .then((response) => response.json())
@@ -50,12 +50,12 @@ const Aids = ({ point, name }) => {
           </div>
         ))}
       </div>
-
       <div className="pagination-box">
-        <a className="paging_btn">1</a>
-        <a className="paging_btn">2</a>
-        <a className="paging_btn">3</a>
-        <a className="paging_btn">4</a>
+        {Array.from({ length: totalPages }, (_, index) => (
+          <a key={index} className="paging_btn">
+            {index + 1}
+          </a>
+        ))}
       </div>
     </div>
   );
