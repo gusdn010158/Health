@@ -32,18 +32,17 @@ const BuigTitle = styled.h1`
   margin: 20px;
 `;
 
-const MainNewContainer = styled.div`
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
-  height: 450px;
-  box-sizing: border-box;
-`;
-
-const MainNewScroll = styled.div`
+const Bidd = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 282px;
+  height: 300px;
+`;
+const FEG = styled.div`
+  width: 100%;
+  height: 550px;
+  display: flex;
   overflow-x: scroll;
-
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -70,26 +69,23 @@ function Productsmainbest({ apiEndpoint, big }) {
   }, [apiEndpoint]);
 
   return (
-    <>
+    <FEG>
       {bests.map((bests) => (
-        <>
+        <Bidd>
           <BuigTitle>{bests.big}</BuigTitle>
-          <MainNewContainer>
-            <MainNewScroll>
-              <MainBestItem key={bests.id}>
-                <Link to={`/products/manentire/${bests.id}`}>
-                  <img className="main_img1" src={bests.img} alt="img" />
-                  <div className="main_text1">
-                    <h2>{bests.name}</h2>
-                    {bests.price}원
-                  </div>
-                </Link>
-              </MainBestItem>
-            </MainNewScroll>
-          </MainNewContainer>
-        </>
+
+          <MainBestItem key={bests.id}>
+            <Link to={`/products/manentire/${bests.id}`}>
+              <img className="main_img1" src={bests.img} alt="img" />
+              <div className="main_text1">
+                <h2>{bests.name}</h2>
+                {bests.price}원
+              </div>
+            </Link>
+          </MainBestItem>
+        </Bidd>
       ))}
-    </>
+    </FEG>
   );
 }
 

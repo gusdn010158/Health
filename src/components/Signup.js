@@ -1,13 +1,61 @@
 import React from "react";
-import "./Signup.css";
-
+import styled, { createGlobalStyle } from "styled-components";
 import Header from "./Header";
 
+// Global styles
+const GlobalStyle = createGlobalStyle`
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+`;
+
+// Styled Components
+const Center = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  border-radius: 10px;
+`;
+
+const Banner = styled.div`
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  align-items: center;
+  background-color: white;
+`;
+
+const BannerBtn = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+// Signup Component
 export default function Signup() {
   return (
     <>
+      <GlobalStyle />
       <Header />
-      <div className="center">
+      <Center>
         <h1>Sign up</h1>
         <form method="post">
           <div className="txt_field">
@@ -28,7 +76,7 @@ export default function Signup() {
           </div>
           <input type="submit" value="Sign up" />
         </form>
-      </div>
+      </Center>
     </>
   );
 }
