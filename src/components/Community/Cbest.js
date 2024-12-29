@@ -1,6 +1,103 @@
 import React, { useState, useEffect } from "react";
-import "./Cbest.css";
 import { Link, useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import backpage from "../img/backpage.jpg";
+import showingpage from "../img/showingpage.png";
+const CbestContainer = styled.div`
+  width: 100%;
+  height: 950px;
+  display: flex;
+  justify-content: center;
+  background-image: url(${backpage});
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: scroll;
+`;
+
+const MainContainer = styled.div`
+  margin-top: 60px;
+  box-sizing: border-box;
+  width: 70%;
+  height: 900px;
+  background-color: #ffff;
+  background-image: url(${showingpage});
+`;
+
+const Form = styled.form`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+`;
+
+const Title = styled.h2`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 400px;
+`;
+
+const Choice = styled.div`
+  margin-bottom: 50px;
+  display: flex;
+
+  select {
+    border-radius: 10px;
+    margin-left: 840px;
+  }
+`;
+
+const InputContainer = styled.div`
+  height: 8%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+
+  input {
+    height: 100%;
+    border-radius: 7px;
+  }
+`;
+
+const TextContainer = styled.div`
+  flex-direction: column;
+  height: 50%;
+  width: 70%;
+  display: flex;
+
+  textarea {
+    border-radius: 7px;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  margin-top: 15px;
+  display: flex;
+  width: 70%;
+  height: 30px;
+
+  button {
+    box-shadow: 2px 2px 2px 2px gray;
+    color: #ffff;
+    border: none;
+    background-color: #b98eff;
+    border-radius: 5px;
+    font-family: "oneFontTitle";
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    display: flex;
+  }
+`;
 
 function Cbest(props) {
   const navigate = useNavigate();
@@ -42,18 +139,18 @@ function Cbest(props) {
   };
 
   return (
-    <div className="Cbest">
-      <div className="cbest_main">
-        <form className="cbest_from" onSubmit={onSubmit}>
-          <h2 className="cbest_h2">게시물 올리기</h2>
-          <div className="choice">
+    <CbestContainer>
+      <MainContainer>
+        <Form onSubmit={onSubmit}>
+          <Title>게시물 올리기</Title>
+          <Choice>
             <select>
               <option>체중감량</option>
               <option>근력강화</option>
               <option>식단조절</option>
             </select>
-          </div>
-          <div className="cbest_input">
+          </Choice>
+          <InputContainer>
             <h3>제목</h3>
             <input
               type="text"
@@ -62,18 +159,17 @@ function Cbest(props) {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
-          </div>
-          <div className="cbest_text">
+          </InputContainer>
+          <TextContainer>
             <h3>내용</h3>
             <textarea
               name="body"
-              className="cbest_textarea"
               placeholder="내용을 입력해주세요"
               value={body}
               onChange={(e) => setBody(e.target.value)}
             />
-          </div>
-          <div className="cbest_input">
+          </TextContainer>
+          <InputContainer>
             <h3>작성자</h3>
             <input
               type="text"
@@ -82,8 +178,8 @@ function Cbest(props) {
               value={writer}
               onChange={(e) => setWriter(e.target.value)}
             />
-          </div>
-          <div className="cbest_button">
+          </InputContainer>
+          <ButtonContainer>
             <button type="submit">등록</button>
             <button type="button">
               <Link
@@ -93,10 +189,10 @@ function Cbest(props) {
                 목록
               </Link>
             </button>
-          </div>
-        </form>
-      </div>
-    </div>
+          </ButtonContainer>
+        </Form>
+      </MainContainer>
+    </CbestContainer>
   );
 }
 
