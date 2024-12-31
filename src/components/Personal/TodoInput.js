@@ -1,6 +1,34 @@
 import React, { useRef, useState } from "react";
-import "./TodoInput.css";
+import styled from "styled-components";
 import { MdAddCircle } from "react-icons/md";
+
+const Form = styled.form`
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+`;
+
+const Input = styled.input`
+  width: 250px;
+  height: 40px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #cdcdcd;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+`;
+
+const Button = styled.button`
+  border: none;
+  background-color: white;
+  margin-top: 25px;
+  margin-left: 20px;
+`;
+
+const Icon = styled(MdAddCircle)`
+  color: rgb(203, 170, 254);
+`;
 
 const TodoInput = ({ onAdd }) => {
   const textRef = useRef();
@@ -12,9 +40,9 @@ const TodoInput = ({ onAdd }) => {
   };
 
   const onSubmit = (evt) => {
-    evt.preventDefault(); //새로고침 방지
+    evt.preventDefault(); // 새로고침 방지
 
-    if (!text) return; //text에 아무것도 없을 때 - 공백 입력 방지
+    if (!text) return; // text에 아무것도 없을 때 - 공백 입력 방지
 
     onAdd(text);
 
@@ -23,14 +51,13 @@ const TodoInput = ({ onAdd }) => {
   };
 
   return (
-    <form className="TodoInput" onSubmit={onSubmit}>
-      <input type="text" value={text} onChange={changeInput} ref={textRef} />
-      <button>
-        <MdAddCircle className="icon" size="50"></MdAddCircle>
-      </button>
-    </form>
+    <Form onSubmit={onSubmit}>
+      <Input type="text" value={text} onChange={changeInput} ref={textRef} />
+      <Button>
+        <Icon size="50" />
+      </Button>
+    </Form>
   );
 };
 
 export default TodoInput;
-
