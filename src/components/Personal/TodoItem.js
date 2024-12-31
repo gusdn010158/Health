@@ -4,24 +4,41 @@ import {
   MdOutlineCheckBox,
   MdOutlineCheckBoxOutlineBlank,
 } from "react-icons/md";
-import "./TodoItem.css";
+import styled from "styled-components";
+
+const ListItem = styled.li`
+  border-radius: 10px;
+`;
+
+const Text = styled.span`
+  &.completed {
+    text-decoration: line-through;
+    color: black;
+  }
+`;
+
+const Button = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+`;
 
 const TodoItem = ({ todos, onDel, onToggle }) => {
   const { id, text, done } = todos;
 
   return (
     <div>
-      <li className={done ? "on" : ""}>
+      <ListItem className={done ? "on" : ""}>
         <span onClick={() => onToggle(id)}>
           {done ? <MdOutlineCheckBox /> : <MdOutlineCheckBoxOutlineBlank />}
         </span>
-        <span onClick={() => onToggle(id)} className={done ? "completed" : ""}>
+        <Text onClick={() => onToggle(id)} className={done ? "completed" : ""}>
           {text}
-        </span>
-        <button onClick={() => onDel(id)}>
+        </Text>
+        <Button onClick={() => onDel(id)}>
           <FaRegTrashAlt />
-        </button>
-      </li>
+        </Button>
+      </ListItem>
     </div>
   );
 };

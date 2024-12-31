@@ -1,5 +1,5 @@
-import "./Chart.css";
 import React from "react";
+import styled from "styled-components";
 import {
   LineChart,
   Line,
@@ -9,6 +9,14 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
+
+const ChartContainer = styled.div`
+  border-radius: 1rem;
+  font-weight: bolder;
+  padding: 2rem 2rem 1rem 0;
+  margin: 3rem 0 0 5rem;
+  box-shadow: 5px 5px 20px lightgray;
+`;
 
 const data = [
   { day: "1일", kg: 80 },
@@ -22,7 +30,7 @@ const data = [
 
 export default function Chart() {
   return (
-    <div className="chart-container">
+    <ChartContainer>
       <LineChart width={500} height={300} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="day" />
@@ -31,6 +39,6 @@ export default function Chart() {
         <Legend />
         <Line type="monotone" dataKey="kg" stroke="rgb(203, 170, 254)" />
       </LineChart>
-    </div>
+    </ChartContainer>
   );
 }
