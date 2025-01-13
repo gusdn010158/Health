@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import data from "../../json-server/db.json";
 const MainBestItem = styled.div`
   min-width: 282px;
   margin: 20px;
@@ -62,12 +62,16 @@ const FEG = styled.div`
 function Productsmainbest({ apiEndpoint, big }) {
   const [bests, setBests] = useState([]);
 
+  // useEffect(() => {
+  //   fetch(`http://localhost:4000/${apiEndpoint}`)
+  //     .then((response) => response.json())
+  //     .then((data) => setBests(data));
+  // }, [apiEndpoint]);
   useEffect(() => {
-    fetch(`http://localhost:4000/${apiEndpoint}`)
-      .then((response) => response.json())
-      .then((data) => setBests(data));
+    if (data[apiEndpoint]) {
+      setBests(data[apiEndpoint]);
+    }
   }, [apiEndpoint]);
-
   return (
     <FEG>
       {bests.map((bests) => (

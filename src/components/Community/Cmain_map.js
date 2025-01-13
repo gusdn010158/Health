@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import loone from "../img/loone.png";
-
+import data from "../../json-server/db.json";
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -65,12 +65,8 @@ const Cmain_map = () => {
   const [name, setName] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/names")
-      .then((response) => response.json())
-      .then((data) => {
-        setName(data);
-      });
-  }, []);
+    setName(data.names);
+  });
 
   const handleDelete = (id) => {
     fetch(`http://localhost:4000/names/${id}`, {

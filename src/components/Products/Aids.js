@@ -1,16 +1,19 @@
 import "./Aids.css";
 import React, { useEffect, useState } from "react";
-
+import data from "../../json-server/db.json";
 const Aids = ({ point, name }) => {
-  const [data, setData] = useState([]);
+  const [aiddata, setaidData] = useState([]);
   const totalPages = 4;
+  // useEffect(() => {
+  //   fetch(`http://localhost:4000/${point}`)
+  //     .then((response) => response.json())
+  //     .then((data) => setData(data));
+  // }, [point]);
   useEffect(() => {
-    fetch(`http://localhost:4000/${point}`)
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error("Error fetching data:", error));
+    if (data[point]) {
+      setaidData(data[point]);
+    }
   }, [point]);
-
   return (
     <div className="Aids">
       <div className="rap_head">
@@ -29,7 +32,7 @@ const Aids = ({ point, name }) => {
       </div>
 
       <div className="aidmain">
-        {data.map((item) => (
+        {aiddata.map((item) => (
           <div className="rap_main" key={item.id}>
             <img className="rap_main_img" src={item.img} alt="img" />
             <div className="rap_main_plus">

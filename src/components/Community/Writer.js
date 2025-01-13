@@ -2,20 +2,22 @@ import React from "react";
 import { useRef, useState, useEffect } from "react";
 
 import "./Content.css";
-
+import data from "../../json-server/db.json";
 function Writer(props) {
   const [con, setCon] = useState([]);
 
+  // useEffect(() => {
+  //   fetch("http://localhost:4000/content")
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setCon(data);
+  //     });
+  // }, []);
   useEffect(() => {
-    fetch("http://localhost:4000/content")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setCon(data);
-      });
-  }, []);
-
+    setCon(data.content);
+  });
   function onSubmit(e) {
     fetch(`http://localhost:4000/content`, {
       method: "POST",
