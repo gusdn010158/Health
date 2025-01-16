@@ -1,20 +1,25 @@
 import { React, useState, useEffect } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import "./Content.css";
 import Writer from "./Writer";
 import data from "../../json-server/db.json";
+
 function Content(props) {
   const { id } = useParams();
   const [names, setNames] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/names/${id}`).then((response) => {
-      setNames(response.data);
-    });
+    const item = data.names.find((product) => product.id === id); // id를 찾아서 해당 항목을 설정
+    if (item) {
+      setNames(item);
+    } else {
+      console.error(`Category "${id}" does not exist in data.`);
+      setNames(null);
+    }
   }, [id]);
+
   if (!names) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>; // names가 null일 때 로딩 화면 표시
   }
 
   return (
@@ -24,7 +29,7 @@ function Content(props) {
           <div className="content_title_pic"></div>
           <div>
             <div className="content_title_title">{names.title}</div>
-            <div className="content_title_name">작성자:{names.writer}</div>
+            <div className="content_title_name">작성자: {names.writer}</div>
           </div>
         </div>
 

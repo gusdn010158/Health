@@ -59,7 +59,7 @@ const FEG = styled.div`
   }
 `;
 
-function Productsmainbest({ apiEndpoint, big }) {
+function Productsmainbest({ apiEndpoint }) {
   const [bests, setBests] = useState([]);
 
   // useEffect(() => {
