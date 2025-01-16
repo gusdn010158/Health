@@ -1,7 +1,8 @@
-import { React, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import data from "../../json-server/db.json";
+
 const MainBestItem = styled.div`
   min-width: 282px;
   margin: 20px;
@@ -27,17 +28,13 @@ const MainBestItem = styled.div`
   }
 `;
 
-const BuigTitle = styled.h1`
-  font-family: "oneFontTitle";
-  margin: 20px;
-`;
-
 const Bidd = styled.div`
   display: flex;
   flex-direction: column;
   width: 282px;
   height: 300px;
 `;
+
 const FEG = styled.div`
   width: 100%;
   height: 550px;
@@ -62,24 +59,20 @@ const FEG = styled.div`
 function Productsmainbest({ apiEndpoint }) {
   const [bests, setBests] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:4000/${apiEndpoint}`)
-  //     .then((response) => response.json())
-  //     .then((data) => setBests(data));
-  // }, [apiEndpoint]);
   useEffect(() => {
     if (data[apiEndpoint]) {
       setBests(data[apiEndpoint]);
+    } else {
+      console.error(`Category "${apiEndpoint}" does not exist in data.`);
     }
   }, [apiEndpoint]);
+
   return (
     <FEG>
       {bests.map((bests) => (
-        <Bidd>
-          <BuigTitle>{bests.big}</BuigTitle>
-
-          <MainBestItem key={bests.id}>
-            <Link to={`/products/manentire/${bests.id}`}>
+        <Bidd key={bests.id}>
+          <MainBestItem>
+            <Link to={`/products/${apiEndpoint}/${bests.id}`}>
               <img className="main_img1" src={bests.img} alt="img" />
               <div className="main_text1">
                 <h2>{bests.name}</h2>

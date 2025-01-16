@@ -9,18 +9,22 @@ function Productsmain() {
     <Productsmai>
       <Advertisement>
         <img src={advertisement} alt="advertisement" />
-
-        <Productsmainbest apiEndpoint="products" big="Best" />
+        <BuigTitle>Best</BuigTitle>
+        <Productsmainbest apiEndpoint="products" />
 
         <Prototype />
-        <Productsmainbest apiEndpoint="massage" big="New" />
+        <BuigTitle>New</BuigTitle>
+        <Productsmainbest apiEndpoint="massage" />
       </Advertisement>
     </Productsmai>
   );
 }
 
 export default Productsmain;
-
+const BuigTitle = styled.h1`
+  font-family: "oneFontTitle";
+  margin: 20px;
+`;
 const Productsmai = styled.div`
   padding-left: 15%;
   background-color: #ffff;
