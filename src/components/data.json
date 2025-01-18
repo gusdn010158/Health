@@ -1,0 +1,53 @@
+{
+  "content": [
+    {
+      "id": "1",
+      "body": "우와 최고에요"
+    },
+    {
+      "body": "와 꿀팁이네요",
+      "id": "2"
+    },
+    {
+      "id": "a66b",
+      "body": "테스트"
+    }
+  ],
+  "names": [
+    {
+      "id": "1",
+      "title": "체중감량",
+      "body": "신세경의 다이어트 비법",
+      "writer": "이현우",
+      "logo": "./img/loone.png"
+    },
+    {
+      "id": "2",
+      "title": "근력강화",
+      "body": "헬린이들 이거보면서 운동하세요",
+      "writer": "김해인",
+      "logo": "lotwo"
+    },
+    {
+      "id": "3",
+      "title": "체중감량",
+      "body": "20kg감량한 썰 푼다",
+      "writer": "임욱",
+      "logo": "lotwo"
+    },
+    {
+      "id": "4",
+      "title": "식단 조절",
+      "body": "당뇨 환자의 식단 꿀팁",
+      "writer": "권해수",
+      "logo": "loone"
+    },
+    {
+      "id": "5",
+      "title": "체중감량",
+      "body": "신세경의 다이어트 비법",
+      "writer": "이현우",
+      "logo": "lotwo"
+    }
+  ]
+}
