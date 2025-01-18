@@ -1,8 +1,58 @@
-import { React, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./Content.css";
+import styled from "styled-components";
 import Writer from "./Writer";
 import data from "../../json-server/db.json";
+
+const ContentContainer = styled.div`
+  height: 950px;
+  overflow-y: scroll;
+`;
+
+const ContentBody = styled.div`
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ContentTitle = styled.div`
+  display: flex;
+  width: 70%;
+  height: 120px;
+  background-color: azure;
+  align-items: center;
+`;
+
+const ContentTitlePic = styled.div`
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: darkgray;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+`;
+
+const ContentTitleText = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ContentTitleName = styled.div`
+  font-size: small;
+`;
+
+const ContentTitleHeading = styled.div`
+  font-weight: 800;
+  font-size: large;
+`;
+
+const ContentContent = styled.div`
+  padding: 30px;
+  width: 70%;
+  height: 400px;
+`;
 
 function Content(props) {
   const { id } = useParams();
@@ -23,65 +73,22 @@ function Content(props) {
   }
 
   return (
-    <div className="content">
-      <div className="content_body">
-        <div className="content_title">
-          <div className="content_title_pic"></div>
-          <div>
-            <div className="content_title_title">{names.title}</div>
-            <div className="content_title_name">작성자: {names.writer}</div>
-          </div>
-        </div>
+    <ContentContainer>
+      <ContentBody>
+        <ContentTitle>
+          <ContentTitlePic />
+          <ContentTitleText>
+            <ContentTitleHeading>{names.title}</ContentTitleHeading>
+            <ContentTitleName>작성자: {names.writer}</ContentTitleName>
+          </ContentTitleText>
+        </ContentTitle>
 
-        <div className="content_content">{names.body}</div>
+        <ContentContent>{names.body}</ContentContent>
 
         <Writer />
-      </div>
-    </div>
+      </ContentBody>
+    </ContentContainer>
   );
 }
 
 export default Content;
-
-// import { React, useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
-// import "./Content.css";
-// import Writer from "./Writer";
-// import data from "../../json-server/db.json";
-
-// function Content() {
-//   const { id } = useParams();
-//   const [names, setNames] = useState(null);
-
-//   useEffect(() => {
-//     console.log("Data:", data.names); // 데이터 구조 확인
-//     const foundName = data.names.find((item) => item.id === Number(id)); // id 비교
-//     if (foundName) {
-//       setNames(foundName);
-//     } else {
-//       console.error("No data found for ID:", id);
-//     }
-//   }, [id]);
-
-//   if (!names) {
-//     return <div>Loading...</div>;
-//   }
-
-//   return (
-//     <div className="content">
-//       <div className="content_body">
-//         <div className="content_title">
-//           <div className="content_title_pic"></div>
-//           <div>
-//             <div className="content_title_title">{names.title}</div>
-//             <div className="content_title_name">작성자: {names.writer}</div>
-//           </div>
-//         </div>
-//         <div className="content_content">{names.body}</div>
-//         <Writer />
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Content;

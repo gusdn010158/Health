@@ -1,19 +1,146 @@
 import { React } from "react";
-import "./Cmain.css";
+
 import Cmain_map from "./Cmain_map";
 import { Link, Route, Routes } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import Cbest from "./Cbest";
+import styled from "styled-components";
+import backpage from "../img/backpage.jpg";
+import ad3 from "../img/ad_3.jpg";
+const StyledCmain = styled.div`
+  width: 100%;
+  height: 980px;
+  display: flex;
+  justify-content: center;
+  background-image: url(${backpage});
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: scroll;
+`;
+
+const CmainMain = styled.div`
+  width: 70%;
+  height: 1200px;
+  background-color: #ffff;
+`;
+
+const CmainAb = styled.div`
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const CmainA = styled.div`
+  height: 360px;
+  width: 1300px;
+  background-size: cover;
+  background-image: url(${ad3});
+`;
+
+const SearchContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  height: 70px;
+
+  > ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+  }
+
+  .option_title {
+    text-decoration: none;
+    color: #8a8a8a;
+    font-weight: bolder;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+  }
+
+  .options_container {
+    display: none;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    text-decoration: none;
+    color: #8a8a8a;
+    box-shadow: 5px 5px 20px lightgray;
+
+    a {
+      text-decoration: none;
+      color: #8a8a8a;
+      padding: 10px;
+    }
+  }
+
+  li:hover .options_container {
+    display: block;
+  }
+
+  .option_parent:hover {
+    background-color: #ccd7ff;
+    border-radius: 0;
+  }
+`;
+
+const BtnWrite = styled.button`
+  color: #b98eff;
+  font-weight: bolder;
+  padding: 10px 0px;
+  width: 80px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #b98eff;
+    color: rgb(49, 49, 49);
+    border: none;
+  }
+`;
+
+const CrudMap = styled.div`
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  > * {
+    flex-shrink: 0;
+  }
+`;
+
+const PaginationBox = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const PagingBtn = styled.a`
+  text-decoration: none;
+  color: #b98eff;
+  padding: 20px;
+`;
+
+const SearchPostInput = styled.input`
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+`;
 
 function Cmain() {
   const rule = ["근력강화", "식단조절", "체중감량량"];
   return (
-    <div className="Cmain">
-      <div className="cmain_main">
-        <div className="cmain_ab">
-          <div className="cmain_a" />
-        </div>
-        <div className="search_container">
+    <StyledCmain>
+      <CmainMain>
+        <CmainAb>
+          <CmainA />
+        </CmainAb>
+        <SearchContainer>
           <ul>
             <li>
               <a className="option_title" href="/#">
@@ -29,10 +156,7 @@ function Cmain() {
             </li>
           </ul>
           <div>
-            <input
-              className="search_post_input"
-              placeholder="무엇이 궁금하세요?"
-            />
+            <SearchPostInput placeholder="무엇이 궁금하세요?" />
             <button>
               <FiSearch />
             </button>
@@ -41,31 +165,29 @@ function Cmain() {
             to="/Community/Cbest"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <button className="btn_write">글쓰기</button>
+            <BtnWrite>글쓰기</BtnWrite>
           </Link>
-        </div>
+        </SearchContainer>
         <hr />
-        <div className="cmain_crud">
-          <div className="crud_main">
-            <div className="crud_map">
+        <div>
+          <div>
+            <CrudMap>
               <Cmain_map />
-            </div>
+            </CrudMap>
           </div>
         </div>
 
-        <div className="pagination-box">
+        <PaginationBox>
           {[1, 2, 3, 4].map((page) => (
-            <a key={page} className="paging_btn">
-              {page}
-            </a>
+            <PagingBtn>{page}</PagingBtn>
           ))}
-        </div>
-      </div>
+        </PaginationBox>
+      </CmainMain>
 
       <Routes>
         <Route path="Cbest" element={<Cbest />} />
       </Routes>
-    </div>
+    </StyledCmain>
   );
 }
 

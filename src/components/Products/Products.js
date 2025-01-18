@@ -1,14 +1,99 @@
-import "./Products.css";
 import React, { useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
 import Productsmain from "./Productsmain";
 import Aids from "./Aids";
 import ProductsList from "./ProductsList";
 import Header from "../Header";
+import styled from "styled-components";
+
+const ProductsWrapper = styled.div`
+  overflow-y: scroll;
+  height: 950px;
+  background-image: url("../img/showingpage.png");
+
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #cfd3da;
+    background-clip: padding-box;
+    border: 5px solid transparent;
+    border-radius: 30px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #ffff;
+  }
+`;
+
+const StyledAsideMenu = styled.aside`
+  top: 60px;
+  width: 15%;
+  height: 1400px;
+  background-color: white;
+  margin: 0px;
+  position: fixed;
+`;
+
+const MainMain = styled.h1`
+  font-family: "oneFontTitle";
+  color: #ffff;
+  font-size: 25px;
+  margin-top: 0px;
+  display: flex;
+  background-color: #6140a0;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+`;
+
+const DropdownMenuWrapper = styled.div``;
+
+const MainTitle = styled.h3`
+  font-family: "oneFontTitle";
+  background-color: #b98eff;
+  margin-top: 0px;
+  color: #ffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+`;
+
+const ShowMenu = styled.ul`
+  background-color: #ffff;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  left: 0px;
+  transition: 0.1s;
+`;
+
+const MenuItem = styled.li`
+  list-style: none;
+  font-family: "oneFont";
+  &:hover {
+    background-color: #e5c7fb;
+  }
+`;
+
+const HideMenu = styled.ul`
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 0px;
+  position: relative;
+  left: -150px;
+  transition: 0.1s;
+`;
 
 function Products() {
   return (
-    <div className="Products">
+    <ProductsWrapper>
       <Header />
       <AsideMenu />
       <Routes>
@@ -21,7 +106,7 @@ function Products() {
         />
         <Route path="/Yoga" element={<Aids point="Yoga" name="요가" />} />
       </Routes>
-    </div>
+    </ProductsWrapper>
   );
 }
 
@@ -68,14 +153,14 @@ function AsideMenu() {
   ];
 
   return (
-    <aside className="aside_menu">
+    <StyledAsideMenu>
       <Link to="/Products" style={{ textDecoration: "none" }}>
-        <h1 className="main_main">메인으로</h1>
+        <MainMain>메인으로</MainMain>
       </Link>
       {menus.map((menu, index) => (
         <DropdownMenu key={index} title={menu.title} items={menu.items} />
       ))}
-    </aside>
+    </StyledAsideMenu>
   );
 }
 
@@ -84,22 +169,24 @@ function DropdownMenu({ title, items }) {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <h3 className="main_title" onClick={toggleMenu}>
-        {title}
-      </h3>
-      <ul className={isOpen ? "show-menu" : "hide-menu"}>
-        {items.map((item, index) => (
-          <Link
-            key={index}
-            to={item.path}
-            style={{ textDecoration: "none", color: "black" }}
-          >
-            <li className="menu_item">{item.label}</li>
-          </Link>
-        ))}
-      </ul>
-    </div>
+    <DropdownMenuWrapper>
+      <MainTitle onClick={toggleMenu}>{title}</MainTitle>
+      {isOpen ? (
+        <ShowMenu>
+          {items.map((item, index) => (
+            <Link
+              key={index}
+              to={item.path}
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <MenuItem>{item.label}</MenuItem>
+            </Link>
+          ))}
+        </ShowMenu>
+      ) : (
+        <HideMenu />
+      )}
+    </DropdownMenuWrapper>
   );
 }
 
