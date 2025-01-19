@@ -31,24 +31,6 @@ const Center = styled.div`
   border-radius: 10px;
 `;
 
-const Banner = styled.div`
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  align-items: center;
-  background-color: white;
-`;
-
-const BannerBtn = styled.div`
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-`;
-
 // Signup Component
 export default function Signup() {
   return (
