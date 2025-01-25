@@ -68,17 +68,6 @@ const Cmain_map = () => {
     setName(data.names);
   });
 
-  // const handleDelete = (id) => {
-  //   fetch(`http://localhost:4000/names/${id}`, {
-  //     method: "DELETE",
-  //   })
-  //     .then((response) => {
-  //       if (response.ok) {
-  //         setName(name.filter((item) => item.id !== id));
-  //       }
-  //     })
-  //     .catch((error) => console.error("Error deleting item:", error));
-  // };
   const handleDelete = (id) => {
     fetch(`/api/delete-name?id=${id}`, {
       method: "DELETE",
