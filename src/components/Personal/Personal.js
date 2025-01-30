@@ -14,6 +14,10 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100vh;
+  @media (max-width: 960px) {
+    flex-direction: column;
+    height: 200vh;
+  }
 `;
 
 const LeftSide = styled.div`

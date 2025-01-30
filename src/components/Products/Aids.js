@@ -48,6 +48,9 @@ const AidMain = styled.div`
   display: flex;
   width: 1600px;
   flex-wrap: wrap;
+  @media (max-width: 960px) {
+    width: auto;
+  }
 `;
 
 const RapMain = styled.div`
@@ -64,6 +67,10 @@ const RapMain = styled.div`
   &:hover {
     transform: scale(1.1);
     transition-duration: 0.5s;
+  }
+  @media (max-width: 960px) {
+    flex-direction: column;
+    margin: 69px;
   }
 `;
 
@@ -111,6 +118,7 @@ const RMainButton = styled.button`
   border-radius: 10px;
   background-color: #b98eff;
   font-family: "oneFontTitle";
+  color: white;
   &:hover {
     transform: scale(1.1);
     transition-duration: 0.5s;

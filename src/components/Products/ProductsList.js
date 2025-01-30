@@ -14,19 +14,28 @@ const ProductsListWrapper = styled.div`
     height: 1000px;
     display: flex;
     flex-direction: column;
+    @media (max-width: 960px) {
+      height: auto;
+    }
   }
 
   .shopping_1 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: 960px) {
+      flex-direction: column;
+    }
   }
 `;
 
 const ProductCard = styled.div`
   width: 25%;
   height: 450px;
-
+  @media (max-width: 960px) {
+    width: 100%;
+    height: 650px;
+  }
   .main1_link {
     display: flex;
     align-items: center;
@@ -42,6 +51,9 @@ const ProductCard = styled.div`
     width: 80%;
     object-fit: cover;
     border-radius: 5%;
+    @media (max-width: 960px) {
+      height: 500px;
+    }
   }
 
   .main1_text {

@@ -22,6 +22,9 @@ const CmainMain = styled.div`
   width: 70%;
   height: 1200px;
   background-color: #ffff;
+  @media (max-width: 960px) {
+    height: 3000px;
+  }
 `;
 
 const CmainAb = styled.div`
@@ -112,6 +115,10 @@ const CrudMap = styled.div`
 
   > * {
     flex-shrink: 0;
+  }
+
+  @media (max-width: 960px) {
+    flex-direction: column;
   }
 `;
 
