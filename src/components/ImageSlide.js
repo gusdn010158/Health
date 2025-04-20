@@ -7,7 +7,7 @@ import "./MainPage.css";
 import styled from "styled-components";
 const ImageSlider = () => {
   return (
-    <ImageSlide>
+    <>
       <Carousel>
         <Carousel.Item>
           <Dblock src={ad_1} alt="image1" />
@@ -16,7 +16,7 @@ const ImageSlider = () => {
           <Dblock src={ad_2} alt="image2" />
         </Carousel.Item>
       </Carousel>
-    </ImageSlide>
+    </>
   );
 };
 export default ImageSlider;
@@ -25,8 +25,4 @@ const Dblock = styled.img`
   width: 100vw;
   object-fit: cover;
   height: 600px;
-`;
-
-const ImageSlide = styled.div`
-  width: 100vw;
 `;

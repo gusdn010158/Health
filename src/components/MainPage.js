@@ -9,7 +9,9 @@ import logo_mean_right from "./img/logo_mean_right.jpeg";
 
 const MainContainer = styled.div`
   height: 950px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100vw;
 `;
 
 const StyledImage = styled.img`
