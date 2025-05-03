@@ -9,6 +9,7 @@ const ContentRead = styled.div`
   background-color: rgba(221, 178, 255, 0.4);
   border-radius: 15px 15px 0px 0px;
   display: flex;
+  align-items: center;
 `;
 
 const ContentReadPic = styled.div`
@@ -46,6 +47,7 @@ const ContentWriter = styled.div`
   margin-top: 5px;
   width: 100%;
   height: 200px;
+  align-items: center;
   background-color: rgba(221, 178, 255, 0.4);
 `;
 

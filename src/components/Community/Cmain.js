@@ -16,14 +16,24 @@ const StyledCmain = styled.div`
   background-size: cover;
   background-attachment: fixed;
   overflow: scroll;
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 `;
 
 const CmainMain = styled.div`
   width: 70%;
   height: 1200px;
   background-color: #ffff;
+  @media (max-width: 1615px) {
+    width: 100%;
+  }
+  @media (max-width: 1066px) {
+    height: 1700px;
+  }
   @media (max-width: 960px) {
-    height: 3000px;
+    width: 100%;
+    height: 2500px;
   }
 `;
 
@@ -32,6 +42,13 @@ const CmainAb = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 960px) {
+    height: 380px;
+  }
+  @media (max-width: 900px) {
+    height: 260px;
+  }
 `;
 
 const CmainA = styled.div`
@@ -39,6 +56,16 @@ const CmainA = styled.div`
   width: 1300px;
   background-size: cover;
   background-image: url(${ad3});
+
+  @media (max-width: 1230px) {
+    height: 320px;
+  }
+  @media (max-width: 960px) {
+    height: 280px;
+  }
+  @media (max-width: 900px) {
+    height: 260px;
+  }
 `;
 
 const SearchContainer = styled.div`
@@ -51,6 +78,9 @@ const SearchContainer = styled.div`
   > ul {
     margin: 0;
     list-style: none;
+    @media (max-width: 960px) {
+      padding: 0;
+    }
   }
 
   ul li {
@@ -64,6 +94,11 @@ const SearchContainer = styled.div`
     padding: 10px;
     border: 1px solid lightgray;
     border-radius: 10px;
+    @media (max-width: 550px) {
+      border-radius: 5px;
+      padding: 5px;
+      font-size: 12px;
+    }
   }
 
   .options_container {
@@ -103,8 +138,12 @@ const BtnWrite = styled.button`
 
   &:hover {
     background-color: #b98eff;
-    color: rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
     border: none;
+  }
+  @media (max-width: 550px) {
+    padding: 7px 0px;
+    font-size: 12px;
   }
 `;
 
@@ -119,6 +158,7 @@ const CrudMap = styled.div`
 
   @media (max-width: 960px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 

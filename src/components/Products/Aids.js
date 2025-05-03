@@ -49,7 +49,7 @@ const AidMain = styled.div`
   width: 1600px;
   flex-wrap: wrap;
   @media (max-width: 960px) {
-    width: auto;
+    align-items: center;
   }
 `;
 
@@ -71,6 +71,7 @@ const RapMain = styled.div`
   @media (max-width: 960px) {
     flex-direction: column;
     margin: 69px;
+    align-items: center;
   }
 `;
 

@@ -43,6 +43,12 @@ const BannerButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+  @media (max-width: 800px) {
+    font-size: 10px;
+  }
+  @media (max-width: 745px) {
+    padding: 0;
+  }
 `;
 
 const SearchForm = styled.div`

@@ -29,11 +29,14 @@ const ProductsWrapper = styled.div`
 
 const StyledAsideMenu = styled.aside`
   top: 60px;
-  width: 15%;
+  min-width: 15%;
   height: 1400px;
   background-color: white;
   margin: 0px;
   position: fixed;
+  @media (max-width: 1200px) {
+    width: 180px;
+  }
 `;
 
 const MainMain = styled.h1`

@@ -19,6 +19,12 @@ const Container = styled.div`
   &:hover {
     transform: scale(1.1);
   }
+  @media (max-width: 960px) {
+    width: 300px;
+  }
+  @media (max-width: 1400px) {
+    width: 300px;
+  }
 `;
 
 const StyledLink = styled(Link)`
